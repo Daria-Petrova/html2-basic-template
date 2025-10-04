@@ -1,0 +1,14 @@
+.logo {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.logo__image {
+  display: block;
+}
+
+.logo__text {
+  display: none;
+}

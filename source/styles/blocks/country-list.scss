@@ -1,0 +1,85 @@
+.country-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.country-list__label {
+  &:hover {
+    cursor: pointer;
+    .country-list__mark {
+      border-color: $color-base-primary;
+      background-color: $color-base-primary-opacity;
+    }
+  }
+}
+
+.country-list__text {
+  vertical-align: middle;
+}
+
+.country-list__mark {
+  display: inline-block;
+  height: 24px;
+  position: relative;
+  width: 42px;
+  background-color: $color-base-hide;
+  border: 2px solid $color-base-hide;
+  border-radius: 12px;
+  transition: 0.3s;
+  vertical-align: middle;
+
+  &::before {
+    background-color: $color-base-main;
+    content: "";
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+}
+
+.country-list__input:checked + .country-list__mark {
+  background-color: $color-base-primary;
+  border-color: $color-base-primary;
+  transition: 0.3s;
+}
+
+.country-list__input:checked + .country-list__mark:before {
+  transform: translateX(18px);
+}
+
+.country-list__input:disabled + .country-list__mark {
+  background-color: $color-base-hide-light;
+  border-color: $color-base-hide-light;
+}
+
+.country-list__input:disabled:checked ~ .country-list__mark {
+  color: $color-base-hide;
+}
+
+.country-list__input:checked:disabled + .country-list__mark:before {
+  background-color: $color-base-hide;
+}
+
+
+.country-list__text {
+
+}
+
+.country-list__input:focus-visible + .availability-list__mark {
+  border-color: $color-base-primary;
+  background-color: $color-base-primary-opacity;
+  transition: background-color 0.3s;
+}
+
+.country-list__input:active + .availability-list__mark {
+  border-color: $color-base-primary;
+  background-color: $color-base-primary-opacity;
+  transition: background-color 0.3s;
+}
+

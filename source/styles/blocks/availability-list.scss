@@ -1,0 +1,88 @@
+.availability-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.availability-list__label {
+  &:hover {
+    cursor: pointer;
+    .availability-list__mark {
+      border-color: $color-base-primary-light;
+      transition: background-color 0.3s;
+    }
+    .availability-list__mark::before {
+      background-color: $color-base-primary-opacity;
+      transition: background-color 0.3s;
+    }
+  }
+}
+
+.availability-list__text {
+  vertical-align: middle;
+}
+
+.availability-list__mark {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  position: relative;
+  background-color: $color-base-main;
+  border-radius: 50%;
+  border: 2px solid $color-base-hide;
+  transition: border 0.3s;
+  vertical-align: middle;
+
+  &::before {
+    background-color: $color-base-main;
+    bottom: 2px;
+    content: "";
+    height: 16px;
+    left: 2px;
+    position: absolute;
+    width: 16px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+}
+
+.availability-list__input[type="radio"]:checked + .availability-list__mark {
+  border-color: $color-base-primary;
+  transition: border 0.3s;
+}
+
+.availability-list__input[type="radio"]:checked + .availability-list__mark::before {
+  background-color: $color-base-primary;
+  transition: background-color 0.3s;
+}
+
+.availability-list__input[type="radio"]:disabled + .availability-list__mark {
+  cursor: default;
+  border-color: $color-base-hide-light;
+}
+
+.availability-list__input[type="radio"]:disabled + .availability-list__mark::before {
+  background-color: $color-base-main;
+}
+
+.availability-list__input[type="radio"]:disabled ~ .availability-list__text {
+  color: $color-base-hide;
+  cursor: default;
+}
+
+.availability-list__input[type="radio"]:disabled:checked + .availability-list__mark::before {
+  background-color: $color-base-hide-light;
+}
+
+.availability-list__input:focus-visible + .availability-list__mark::before {
+  background-color: $color-base-primary;
+  transition: background-color 0.3s;
+}
+
+.availability-list__input:active + .availability-list__mark::before {
+  background-color: $color-base-primary;
+  transition: background-color 0.3s;
+}

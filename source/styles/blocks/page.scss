@@ -1,0 +1,9 @@
+.page__body {
+  background-color: $color-background-lightest;
+  font-family: $main-font;
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  align-items: end;
+}

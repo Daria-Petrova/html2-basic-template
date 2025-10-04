@@ -1,0 +1,44 @@
+.action-list {
+  max-width: 200px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  justify-content: right;
+}
+
+.action-list__link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  margin: 0 22px;
+  padding: 5px 0;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: $color-base;
+    transition: background-color 0.3s;
+  }
+
+  &--user {
+    &::before {
+      mask: url("../../icons/user-icon.svg");
+    }
+  }
+  &--cart {
+    &::before {
+      mask: url("../../icons/cart-icon.svg");
+    }
+  }
+}
+
+.action-list__link-title {
+  display: none;
+}

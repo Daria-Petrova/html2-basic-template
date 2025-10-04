@@ -1,0 +1,23 @@
+.button {
+  border-radius: 4px;
+  padding: 8px 20px;
+  background-color: $color-base-primary;
+  text-decoration: none;
+  text-align: center;
+  @include font(16px, 1.5, 400, $color-base-main);
+  transition: background-color 0.3s;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color-base-primary-light;
+    transition: background-color 0.3s;
+  }
+
+  &:active {
+    background-color: $color-base-primary-dark;
+  }
+
+  &:disabled {
+    background-color: $color-base-hide;
+  }
+}

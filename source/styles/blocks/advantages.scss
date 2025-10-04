@@ -1,0 +1,63 @@
+.advantages {
+  background-color: $color-base-main;
+  padding: 50px 0 60px;
+}
+
+.advantages__title {
+  @include font(24px, 1.5, 700, $color-base);
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.advantages__list {
+  margin: 0 20px;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.advantages__item {
+  justify-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 52px;
+    height: 56px;
+  }
+
+  &--speed {
+    &::before {
+      background: url("../../icons/clock-icon.svg");
+    }
+  }
+  &--convenience {
+    &::before {
+      background: url("../../icons/fit-icon.svg");
+    }
+  }
+  &--cheerfulness {
+    &::before {
+      background: url("../../icons/energy-icon.svg");
+    }
+  }
+  &--environment {
+    &::before {
+      background: url("../../icons/ecology-icon.svg");
+    }
+  }
+}
+
+.advantages__item-title {
+  margin: 10px auto 4px;
+  @include font(18px, 1.7, 700, $color-base);
+  text-align: center;
+}
+
+.advantages__item-subtitle {
+  margin: 0;
+  text-align: center;
+  @include font(14px, 1.4, 400, $color-base);
+}

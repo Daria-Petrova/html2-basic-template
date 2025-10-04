@@ -1,0 +1,21 @@
+.declaration__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.declaration__item {
+  &--flat {
+    background-color: $color-background-flat;
+  }
+
+  &--latte {
+    background-color: $color-background-lavender;
+  }
+
+  &--espresso {
+    background-color: $color-background-espresso;
+  }
+}

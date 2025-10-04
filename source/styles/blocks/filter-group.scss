@@ -1,0 +1,10 @@
+.filter-group {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-group__title {
+  @include font(16px, 1.5, 600, $color-base);
+  margin-bottom: 20px;
+}

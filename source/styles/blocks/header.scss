@@ -1,5 +1,37 @@
 .header {
-  background-color: #663399;
-  color: #ffffff;
-  padding: 10px 15px;
+  background-color: $color-base-main;
+  color: $color-base;
+  position: relative;
+}
+
+.header__navigation {
+  display: grid;
+  grid-template: 60px 1fr / auto 1fr 60px;
+  grid-template-areas:
+    "logo       actions    toggle"
+    "navigation navigation navigation";
+}
+
+.header__logo {
+  grid-area: logo;
+  display: block;
+  align-content: center;
+  margin: 0 20px;
+}
+
+.header__action-list {
+  grid-area: actions;
+  align-content: center;
+  justify-self: right;
+}
+
+.header__toggle {
+  grid-area: toggle;
+  align-content: center;
+  justify-self: center;
+}
+
+.header__navigation-list {
+  grid-area: navigation;
+  //top: 60px;
 }

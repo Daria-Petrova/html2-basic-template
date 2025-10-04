@@ -1,0 +1,16 @@
+.catalog {
+  margin: 50px 20px 44px;
+}
+
+.catalog__title {
+  @include font(24px, 1.5, 700, $color-base);
+  margin: 0 auto 20px;
+  padding: 0;
+  text-align: center;
+}
+
+.catalog__filter {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
