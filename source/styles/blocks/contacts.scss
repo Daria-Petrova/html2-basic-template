@@ -50,6 +50,18 @@
 
 .contacts__address-phone {
   @include font(14px, 1.4, 400, $color-base);
+  transition: color 0.3s;
   font-style: normal;
   text-decoration: none;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-base-primary;
+    transition: color 0.3s;
+  }
+
+  &:active {
+    color: $color-base-primary-dark;
+    transition: color 0.3s;
+  }
 }

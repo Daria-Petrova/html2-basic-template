@@ -12,6 +12,7 @@
 .catalog__filter {
   display: flex;
   flex-direction: column;
+  justify-self: center;
   gap: 30px;
   max-width: 280px;
   margin-bottom: 40px;
@@ -32,6 +33,7 @@
 .catalog__sort {
   display: flex;
   flex-direction: row;
+  justify-self: center;
   max-width: 280px;
   margin-bottom: 20px;
   position: relative;

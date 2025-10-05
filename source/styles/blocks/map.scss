@@ -14,6 +14,10 @@
   grid-row: 1/ -1;
   grid-column: 1/-1;
   z-index: 1;
+
+  @include tablet-size {
+    max-height: 480px;
+  }
 }
 
 .map__image {

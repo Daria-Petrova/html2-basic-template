@@ -1,5 +1,4 @@
 .action-list {
-  max-width: 200px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -15,8 +14,9 @@
   flex-direction: row;
   justify-content: center;
   align-self: center;
-  margin: 0 22px;
-  padding: 5px 0;
+  margin: 0;
+  padding: 22px;
+  outline: none;
 
   &::before {
     content: "";
@@ -25,6 +25,11 @@
     height: 16px;
     background-color: $color-base;
     transition: background-color 0.3s;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color-base-secondary;
   }
 
   &--user {
@@ -36,6 +41,10 @@
     &::before {
       mask: url("../../icons/cart-icon.svg");
     }
+  }
+
+  @include tablet-size {
+    padding: 32px 22px;
   }
 }
 

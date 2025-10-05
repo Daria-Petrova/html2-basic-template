@@ -6,10 +6,17 @@
 
 .header__navigation {
   display: grid;
-  grid-template: 60px 1fr / auto 1fr 60px;
+  grid-template: minmax(60px, auto) 1fr / auto 1fr 60px;
   grid-template-areas:
     "logo       actions    toggle"
     "navigation navigation navigation";
+
+  @include tablet-size {
+    grid-template: minmax(80px, auto)/ auto 1fr auto;
+    grid-template-areas:
+    "logo navigation actions";
+    gap: 30px;
+  }
 }
 
 .header__logo {
@@ -29,9 +36,12 @@
   grid-area: toggle;
   align-content: center;
   justify-self: center;
+
+  @include tablet-size {
+    display: none;
+  }
 }
 
 .header__navigation-list {
   grid-area: navigation;
-  //top: 60px;
 }
