@@ -168,20 +168,21 @@
               <ul class="filter-group__period period-value">
                 <li class="period-value__item">
                   <label class="period-value__wrapper">
-                    <span class="period-value__label">от</span>
+                    <span class="period-value__label visually-hidden">от</span>
                     <input class="period-value__input"
                             type="number"
-                            name="min-price"
-                            value="0">
+                            placeholder="0"
+                            name="min-price">
                   </label>
                 </li>
+                <li class="period-value__item"><span class="period-value__item-divider"></span></li>
                 <li class="period-value__item">
                   <label class="period-value__wrapper">
-                    <span class="period-value__label">до</span>
+                    <span class="period-value__label visually-hidden">до</span>
                     <input class="period-value__input"
                             type="number"
-                            name="max-price"
-                            value="900">
+                            value="900"
+                            name="max-price">
                   </label>
                 </li>
               </ul>
@@ -269,7 +270,7 @@
           </fieldset>
           <div class="catalog__filter-actions">
             <button class="catalog__filter-button button" type="submit">Применить</button>
-            <button class="catalog__filter-button catalog__filter-button--reset" type="reset">Сбросить</button>
+            <button class="catalog__filter-button button button--reset" type="reset">Сбросить</button>
           </div>
         </form>
         <div class="catalog__sort">
@@ -368,7 +369,7 @@
         </ul>
         <ul class="catalog__pagination">
           <li class="catalog__pagination-item">
-            <a class="catalog__pagination-link"><span class="visually-hidden">Назад</span></a>
+            <a class="catalog__pagination-link" href="#"><span class="catalog__pagination-text catalog__pagination-text--previous">Назад</span></a>
           </li>
           <li class="catalog__pagination-item">
             <a class="catalog__pagination-link" href="#">1</a>
@@ -380,14 +381,14 @@
             <a class="catalog__pagination-link" href="#">3</a>
           </li>
           <li class="catalog__pagination-item">
-            <a class="catalog__pagination-link periods" href="#"><span class="visually-hidden">Вперёд</span></a>
+            <a class="catalog__pagination-link" href="#"><span class="catalog__pagination-text catalog__pagination-text--next">Вперёд</span></a>
           </li>
         </ul>
       </section>
       <section class="map">
         <h2 class="visually-hidden">Найдите нас на карте</h2>
         <div class="map__wrapper">
-          <picture>
+          <picture class="map__wrapper-fake">
             <source width="1440" height="540" type="image/webp" media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.webp 1x, images/map/map-desktop@2x.webp 2x">
             <source width="768" height="480" type="image/webp" media="(min-width: 768px)" srcset="images/map/map-tablet@1x.webp 1x, images/map/map-tablet@2x.webp 2x">
             <source type="image/webp" srcset="images/map/map-mobile@1x.webp 1x, images/map/map-mobile@2x.webp 2x">
@@ -415,7 +416,7 @@
           </a>
         </li>
         <li class="links__social-item">
-          <a class="links__social-link link-telegram" href="#">
+          <a class="links__social-link link-pinterest" href="#">
             <span class="visually-hidden">Cвязаться с нами в Pinterest</span>
           </a>
         </li>
@@ -478,5 +479,6 @@
       </h2>
     </section>
   </footer>
+    <script src="vendor/nouislider/nouislider.js"></script>
   </body>
 </html>

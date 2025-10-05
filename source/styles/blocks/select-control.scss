@@ -1,0 +1,31 @@
+.select-control {
+  box-sizing: border-box;
+  font-family: inherit;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  cursor: pointer;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-color: transparent;
+  @include font(16px, 1.5, 600, $color-base-primary);
+  padding: 4px 10px;
+  border-radius: 4px;
+  text-transform: lowercase;
+  outline: none;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 10px;
+    background-color: green;
+    mask: url("../../icons/arrow-icon.svg");
+  }
+
+  &:focus-visible {
+    background-color: $color-base-secondary;
+  }
+}

@@ -1,0 +1,67 @@
+.links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 22px 20px;
+  gap: 15px;
+  border-bottom: 1px solid $color-base-secondary;
+}
+
+.links__social {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: right;
+  align-self: center;
+  gap: 5px 20px;
+}
+
+.links__social-link {
+  padding: 10px;
+  display: block;
+  border-radius: 4px;
+  outline: none;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: $color-base-hide;
+    transition: background-color 0.3s;
+    mask: url("../../icons/vk-icon.svg");
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color-base-secondary;
+    &::before {
+      background-color: $color-base-primary-dark;
+      transition: background-color 0.3s;
+    }
+  }
+  &:active {
+    background-color: $color-base-primary-opacity;
+  }
+}
+
+.link-vk {
+  &::before {
+    mask: url("../../icons/vk-icon.svg");
+  }
+
+}
+.link-pinterest {
+  &::before {
+    mask: url("../../icons/pinterest-icon.svg");
+  }
+
+}
+.link-ok {
+  &::before  {
+    mask: url("../../icons/ok-icon.svg");
+  }
+}

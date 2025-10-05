@@ -7,6 +7,11 @@
   gap: 20px;
 }
 
+
+.availability-list__text {
+  vertical-align: middle;
+}
+
 .availability-list__label {
   &:hover {
     cursor: pointer;
@@ -19,10 +24,11 @@
       transition: background-color 0.3s;
     }
   }
-}
 
-.availability-list__text {
-  vertical-align: middle;
+  &:has(.availability-list__input:disabled){
+    cursor: default;
+    color: $color-base-hide;
+  }
 }
 
 .availability-list__mark {
@@ -60,7 +66,6 @@
 }
 
 .availability-list__input[type="radio"]:disabled + .availability-list__mark {
-  cursor: default;
   border-color: $color-base-hide-light;
 }
 
@@ -68,21 +73,26 @@
   background-color: $color-base-main;
 }
 
-.availability-list__input[type="radio"]:disabled ~ .availability-list__text {
-  color: $color-base-hide;
-  cursor: default;
-}
-
 .availability-list__input[type="radio"]:disabled:checked + .availability-list__mark::before {
   background-color: $color-base-hide-light;
 }
 
-.availability-list__input:focus-visible + .availability-list__mark::before {
-  background-color: $color-base-primary;
+.availability-list__input[type="radio"]:focus-visible + .availability-list__mark::before {
+  background-color: $color-base-primary-opacity;
+  transition: background-color 0.3s;
+}
+
+.availability-list__input[type="radio"]:focus-visible + .availability-list__mark {
+  border-color: $color-base-primary;
   transition: background-color 0.3s;
 }
 
 .availability-list__input:active + .availability-list__mark::before {
   background-color: $color-base-primary;
+  transition: background-color 0.3s;
+}
+
+.availability-list__input:active + .availability-list__mark::before {
+  border-color: $color-base-primary;
   transition: background-color 0.3s;
 }

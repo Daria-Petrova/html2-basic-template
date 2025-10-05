@@ -1,0 +1,61 @@
+.period-value {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.period-value__input::-webkit-outer-spin-button,
+.period-value__input::-webkit-inner-spin-button,
+.period-value__input {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type='number'] {
+  -webkit-appearance: textfield;
+  appearance: textfield;
+}
+
+.period-value__input {
+  max-width: 118px;
+  max-height: 40px;
+  font-family: inherit;
+  border: 2px solid $color-base-primary-light;
+  border-radius: 4px;
+  padding: 8px 10px;
+  text-align: center;
+  @include font(16px, 1.5, 500, $color-base);
+  outline: none;
+
+  &::placeholder {
+    color: $color-base-hide;
+  }
+
+  &:focus,
+  &:focus-visible {
+      border-color:$color-base-primary-dark ;
+  }
+
+  &:disabled {
+    color: $color-base-hide;
+    border-color: $color-base-hide-light;
+    background-color: $color-background-lightest;
+  }
+
+  &:active {
+    border-color: $color-base-primary-dark;
+  }
+}
+
+.period-value__item-divider {
+  display: block;
+  width: 8px;
+  height: 0px;
+  padding: 1px 0;
+  background-color: $color-base-hide;
+}

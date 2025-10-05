@@ -13,4 +13,157 @@
   display: flex;
   flex-direction: column;
   gap: 30px;
+  max-width: 280px;
+  margin-bottom: 40px;
+}
+
+.catalog__filter-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 280px;
+}
+
+.catalog__filter-button {
+  outline: none;
+  border: none;
+}
+
+.catalog__sort {
+  display: flex;
+  flex-direction: row;
+  max-width: 280px;
+  margin-bottom: 20px;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.catalog__sort-title {
+  @include font(16px, 1.5, 600, $color-base);
+  margin: 0;
+}
+
+.catalog__list {
+  max-width: 280px;
+  display: grid;
+  justify-self: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0 0 40px;
+  padding: 0;
+}
+
+.catalog__item {
+  background-color: $color-base-main;
+  padding: 40px 20px 20px;
+  border-radius: 4px;
+}
+
+.catalog__pagination {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 280px;
+}
+
+.catalog__pagination-item {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.catalog__pagination-link {
+  border-radius: 4px;
+  align-content: center;
+  text-align: center;
+  display: block;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 8px;
+  text-decoration: none;
+  @include font(16px, 1.5, 400, $color-base-primary);
+  background-color: $color-base-main;
+  transition: background-color 0.3s ease-in-out;
+  outline: none;
+
+  &--current {
+    background-color: transparent;
+    @include font(16px, 1.5, 600, $color-base);
+  }
+
+  &--disabled {
+    color: $color-base-main;
+    background-color: $color-base-hide-light;
+  }
+
+  &:has(.catalog__pagination-text--previous) {
+    justify-items: center;
+    &::before{
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      background-color: $color-base-primary;
+      mask: url("../../icons/arrow-icon.svg");
+    }
+
+    &:hover,
+    &:focus-visible,
+    &:focus,
+    &:active,
+    &:disabled {
+      &::before {
+        background-color: $color-base-main;
+      }
+    }
+  }
+
+  &:has(.catalog__pagination-text--next) {
+    justify-items: center;
+    &:after {
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      background-color: $color-base-primary;
+      transform: rotate(180deg);
+      mask: url("../../icons/arrow-icon.svg");
+    }
+
+    &:hover,
+    &:focus-visible,
+    &:focus,
+    &:active,
+    &:disabled {
+      &::after {
+        background-color: $color-base-main;
+      }
+    }
+  }
+
+  &:hover,
+  &:focus-visible,
+  &:focus {
+    color: $color-base-main;
+    background-color: $color-base-primary-light;
+  }
+
+  &:active {
+    color: $color-base-main;
+    background-color: $color-base-primary-dark;
+  }
+
+  &:disabled {
+    color: $color-base-main;
+    background-color: $color-base-hide-light;
+    cursor: default;
+  }
+}
+
+.catalog__pagination-text {
+  display: none;
 }

@@ -15,6 +15,11 @@
       background-color: $color-base-primary-opacity;
     }
   }
+
+  &:has(.country-list__input:disabled) {
+    cursor: default;
+    color: $color-base-hide;
+  }
 }
 
 .country-list__text {
@@ -66,18 +71,7 @@
   background-color: $color-base-hide;
 }
 
-
-.country-list__text {
-
-}
-
-.country-list__input:focus-visible + .availability-list__mark {
-  border-color: $color-base-primary;
-  background-color: $color-base-primary-opacity;
-  transition: background-color 0.3s;
-}
-
-.country-list__input:active + .availability-list__mark {
+.country-list__input:focus-visible + .country-list__mark {
   border-color: $color-base-primary;
   background-color: $color-base-primary-opacity;
   transition: background-color 0.3s;

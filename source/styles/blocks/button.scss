@@ -4,20 +4,29 @@
   background-color: $color-base-primary;
   text-decoration: none;
   text-align: center;
+  font-family: inherit;
   @include font(16px, 1.5, 400, $color-base-main);
   transition: background-color 0.3s;
+
+  &--reset {
+    background-color: $color-base-main;
+    color: $color-base-primary;
+  }
 
   &:hover,
   &:focus-visible {
     background-color: $color-base-primary-light;
+    color: $color-base-main;
     transition: background-color 0.3s;
   }
 
   &:active {
     background-color: $color-base-primary-dark;
+    color: $color-base-main;
   }
 
   &:disabled {
     background-color: $color-base-hide;
+    color: $color-base-main;
   }
 }
