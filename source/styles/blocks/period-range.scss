@@ -1,0 +1,45 @@
+.period-range__slider {
+  width: 280px !important;
+  cursor: pointer;
+  height: 2px !important;
+  border: none;
+  background-color: $color-base-hide-light;
+  margin-bottom: 30px !important;
+
+  @include tablet-size {
+    width: 223px !important;
+  }
+
+  @include desktop-size {
+    width: 318px !important;
+  }
+
+  .noUi-handle {
+    height: 24px !important;
+    width: 24px !important;
+    border-radius: 50% !important;
+    border: 2px solid $color-base-primary-light;
+    top: -12px !important;
+    box-shadow: none !important;
+    background-color: $color-base-main ;
+  }
+
+  .noUi-connect {
+    background-color: $color-base-primary !important;
+  }
+
+  .noUi-connects {
+    height: 4px;
+    top: -2px !important;
+  }
+}
+
+
+.period-range__slider .noUi-handle::after {
+  display: none;
+}
+
+.period-range__slider .noUi-handle::before {
+  display: none;
+}
+

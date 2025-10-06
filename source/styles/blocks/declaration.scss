@@ -1,14 +1,24 @@
+.declaration__wrapper {
+  position: relative;
+
+  @include tablet-size {
+    width: 100%;
+  }
+  @include desktop-size {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
 .declaration__list {
+  justify-content: center;
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-
-
 }
 
 .declaration__item {
+  display: none;
   &--flat {
     background-color: $color-background-flat;
   }
@@ -47,5 +57,98 @@
     &--espresso {
       background-image: none;
     }
+  }
+
+  &--active {
+    display: block;
+  }
+}
+
+
+.declaration__controls {
+  display: none;
+
+  @include desktop-size{
+    display: initial;
+  }
+}
+
+.declaration__button {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  background-color: transparent;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  z-index: 2;
+  opacity: 1;
+  border: none;
+
+  @include tablet-size {
+    width: 80px;
+  }
+
+  &::before{
+    content: "";
+    display: block;
+    width: 20px;
+    height: 16px;
+    background-color: $color-base-primary;
+    justify-self: center;
+    mask: url("../../icons/arrow-icon.svg");
+  }
+
+  &--previous {
+    left: 0;
+
+    &:hover,
+    &:focus-visible {
+      background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &:active {
+      background: linear-gradient(90deg, rgba(120, 89, 207, 0.25) 0%, rgba(120, 89, 207, 0) 100%);
+    }
+  }
+
+  &--next {
+    right: 0;
+    &::before{
+      transform: rotate(180deg);
+    }
+
+    &:hover,
+    &:focus-visible {
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%,  #fff 100%);
+    }
+
+    &:active {
+      background: linear-gradient(90deg, rgba(120, 89, 207, 0) 0%, rgba(120, 89, 207, 0.25) 100%);
+    }
+  }
+
+
+
+  &:disabled {
+    &::before{
+      background-color: $color-base-hide;
+    }
+  }
+
+
+}
+
+.declaration__slider {
+  display: none;
+
+  @include desktop-size{
+    display: initial;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }

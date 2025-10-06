@@ -1,0 +1,28 @@
+.slider {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  list-style: none;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 0;
+}
+
+.slider__mark {
+  display: block;
+  width: 62px;
+  height: 0;
+  padding: 2px 0;
+  background-color: $color-base-main;
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.slider__input {
+  display: none;
+}
+
+.slider__input[type="radio"]:checked + .slider__mark {
+  background-color: $color-base-primary-light;
+  transition: background-color 0.3s;
+}

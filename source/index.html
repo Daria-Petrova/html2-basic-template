@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="preload" href="#" type="font/woff2" as="font">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="vendor/nouislider/nouislider.css" />
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
@@ -19,20 +20,6 @@
           </picture>
           <span class="logo__text">Интерент-магазин кофейных напитков</span>
         </a>
-        <ul class="header__navigation-list navigation-list navigation-list--closed" id="toggle-menu">
-          <li class="navigation-list__item">
-            <a class="navigation-list__link navigation-list__link--active" href="index.html">Главная</a>
-          </li>
-          <li class="navigation-list__item">
-            <a class="navigation-list__link" href="#">Каталог</a>
-          </li>
-          <li class="navigation-list__item">
-            <a class="navigation-list__link" href="#">Доставка</a>
-          </li>
-          <li class="navigation-list__item">
-            <a class="navigation-list__link" href="#">О нас</a>
-          </li>
-        </ul>
         <ul class="header__action-list action-list">
           <li class="action-list__item">
             <a class="action-list__link action-list__link--user" href="#" aria-label="Войти в личный кабинет">
@@ -51,81 +38,123 @@
             <span class="visually-hidden">Показать меню</span>
           </button>
         </div>
-
+        <ul class="header__navigation-list navigation-list navigation-list--closed" id="toggle-menu">
+          <li class="navigation-list__item">
+            <a class="navigation-list__link navigation-list__link--active" href="index.html">Главная</a>
+          </li>
+          <li class="navigation-list__item">
+            <a class="navigation-list__link" href="#">Каталог</a>
+          </li>
+          <li class="navigation-list__item">
+            <a class="navigation-list__link" href="#">Доставка</a>
+          </li>
+          <li class="navigation-list__item">
+            <a class="navigation-list__link" href="#">О нас</a>
+          </li>
+        </ul>
       </nav>
     </header>
     <main>
       <h1 class="visually-hidden">Интерент-магазин кофейных напитков Drink2Go</h1>
       <section class="declaration">
         <h2 class="visually-hidden">Новинки в нашем магазине кофейных напитков</h2>
-        <ul class="declaration__list">
-          <li class="declaration__item declaration__item--flat">
-            <div class="promo-product">
-              <picture class="promo-product__image-fake">
-                <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/promo/flat-white-desktop@1x.webp 1x, images/promo/flat-white-desktop@2x.webp 2x">
-                <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/promo/flat-white-tablet@1x.webp 1x, images/promo/flat-white-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="images/promo/flat-white-mobile@1x.webp 1x, images/promo/flat-white-mobile@2x.webp 2x">
-                <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/promo/flat-white-desktop@1x.png 1x, images/promo/flat-white-desktop@2x.png 2x">
-                <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/promo/flat-white-tablet@1x.png 1x, images/promo/flat-white-tablet@2x.png 2x">
-                <img class="promo-product__image" src="images/promo/flat-white-mobile@1x.png" srcset="images/promo/flat-white-mobile@2x.png" width="280" height="280" alt="Декаф Флэт Уайт">
-              </picture>
-              <p class="promo-product__label label">Новинка!</p>
-              <h3 class="promo-product__title">Декаф Флэт Уайт</h3>
-              <div class="promo-product__subtitle">
-                <p class="promo-product__subtitle-item">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-              </div>
-              <p class="promo-product__price">
-                <span class="promo-product__price-item promo-product__price-item--old">295&#8381;</span>
-                <span class="promo-product__price-item promo-product__price-item--current">225&#8381;</span>
-              </p>
-              <a class="promo-product__link button" href="#">Заказать</a>
-            </div>
-          </li>
-          <li class="declaration__item declaration__item--latte">
-            <div class="promo-product">
-              <picture class="promo-product__image-fake">
-                <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/promo/lavender-latte-desktop@1x.webp 1x, images/promo/lavender-latte-desktop@2x.webp 2x">
-                <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/promo/lavender-latte-tablet@1x.webp 1x, images/promo/lavender-latte-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="images/promo/lavender-latte-mobile@1x.webp 1x, images/promo/lavender-latte-mobile@2x.webp 2x">
-                <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/promo/lavender-latte-desktop@1x.png 1x, images/promo/lavender-latte-desktop@2x.png 2x">
-                <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/promo/lavender-latte-tablet@1x.png 1x, images/promo/lavender-latte-tablet@2x.png 2x">
-                <img class="promo-product__image" src="images/promo/lavender-latte-mobile@1x.png" srcset="images/promo/lavender-latte-mobile@2x.png" width="280" height="280" alt="Лавандовый Латте">
-              </picture>
-              <p class="promo-product__label label">Новинка!</p>
-              <h3 class="promo-product__title">Лавандовый Латте</h3>
-              <div class="promo-product__subtitle">
-                <p class="promo-product__subtitle-item">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
-              </div>
-              <p class="promo-product__price">
-                <span class="promo-product__price-item promo-product__price-item--old">285&#8381;</span>
-                <span class="promo-product__price-item promo-product__price-item--current">265&#8381;</span>
-              </p>
-              <a class="promo-product__link button" href="#">Заказать</a>
-            </div>
-          </li>
-          <li class="declaration__item declaration__item--espresso">
-            <div class="promo-product">
-              <picture class="promo-product__image-fake">
-                <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/promo/espresso-desktop@1x.webp 1x, images/promo/espresso-desktop@2x.webp 2x">
-                <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/promo/espresso-tablet@1x.webp 1x, images/promo/espresso-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="images/promo/espresso-mobile@1x.webp 1x, images/promo/espresso-mobile@2x.webp 2x">
-                <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/promo/espresso-desktop@1x.png 1x, images/promo/espresso-desktop@2x.png 2x">
-                <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/promo/espresso-tablet@1x.png 1x, images/promo/espresso-tablet@2x.png 2x">
-                <img class="promo-product__image" src="images/promo/espresso-mobile@1x.png" srcset="images/promo/espresso-mobile@2x.png" width="280" height="280" alt="Тройной Эспрессо">
-              </picture>
-              <p class="promo-product__label label">Новинка!</p>
-              <h3 class="promo-product__title">Тройной Эспрессо</h3>
-              <div class="promo-product__subtitle">
-                <p class="promo-product__subtitle-item">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
-              </div>
-              <p class="promo-product__price">
-                <span class="promo-product__price-item promo-product__price-item--old">395&#8381;</span>
-                <span class="promo-product__price-item promo-product__price-item--current">375&#8381;</span>
-              </p>
-              <a class="promo-product__link button" href="#">Заказать</a>
-            </div>
-          </li>
-        </ul>
+        <div class="declaration__wrapper">
+          <ul class="declaration__list" aria-live="polite">
+            <li class="declaration__item declaration__item--flat declaration__item--active">
+                <div class="promo-product">
+                  <picture class="promo-product__image-fake">
+                    <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/promo/flat-white-desktop@1x.webp 1x, images/promo/flat-white-desktop@2x.webp 2x">
+                    <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/promo/flat-white-tablet@1x.webp 1x, images/promo/flat-white-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="images/promo/flat-white-mobile@1x.webp 1x, images/promo/flat-white-mobile@2x.webp 2x">
+                    <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/promo/flat-white-desktop@1x.png 1x, images/promo/flat-white-desktop@2x.png 2x">
+                    <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/promo/flat-white-tablet@1x.png 1x, images/promo/flat-white-tablet@2x.png 2x">
+                    <img class="promo-product__image" src="images/promo/flat-white-mobile@1x.png" srcset="images/promo/flat-white-mobile@2x.png" width="280" height="280" alt="Декаф Флэт Уайт">
+                  </picture>
+                  <p class="promo-product__label label">Новинка!</p>
+                  <h3 class="promo-product__title">Декаф Флэт Уайт</h3>
+                  <div class="promo-product__subtitle">
+                    <p class="promo-product__subtitle-item">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
+                  </div>
+                  <p class="promo-product__price">
+                    <span class="promo-product__price-item promo-product__price-item--old">295&#8381;</span>
+                    <span class="promo-product__price-item promo-product__price-item--current">225&#8381;</span>
+                  </p>
+                  <a class="promo-product__link button" href="#">Заказать</a>
+                </div>
+              </li>
+            <li class="declaration__item declaration__item--latte">
+                <div class="promo-product">
+                  <picture class="promo-product__image-fake">
+                    <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/promo/lavender-latte-desktop@1x.webp 1x, images/promo/lavender-latte-desktop@2x.webp 2x">
+                    <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/promo/lavender-latte-tablet@1x.webp 1x, images/promo/lavender-latte-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="images/promo/lavender-latte-mobile@1x.webp 1x, images/promo/lavender-latte-mobile@2x.webp 2x">
+                    <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/promo/lavender-latte-desktop@1x.png 1x, images/promo/lavender-latte-desktop@2x.png 2x">
+                    <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/promo/lavender-latte-tablet@1x.png 1x, images/promo/lavender-latte-tablet@2x.png 2x">
+                    <img class="promo-product__image" src="images/promo/lavender-latte-mobile@1x.png" srcset="images/promo/lavender-latte-mobile@2x.png" width="280" height="280" alt="Лавандовый Латте">
+                  </picture>
+                  <p class="promo-product__label label">Новинка!</p>
+                  <h3 class="promo-product__title">Лавандовый Латте</h3>
+                  <div class="promo-product__subtitle">
+                    <p class="promo-product__subtitle-item">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
+                  </div>
+                  <p class="promo-product__price">
+                    <span class="promo-product__price-item promo-product__price-item--old">285&#8381;</span>
+                    <span class="promo-product__price-item promo-product__price-item--current">265&#8381;</span>
+                  </p>
+                  <a class="promo-product__link button" href="#">Заказать</a>
+                </div>
+              </li>
+            <li class="declaration__item declaration__item--espresso">
+                <div class="promo-product">
+                  <picture class="promo-product__image-fake">
+                    <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/promo/espresso-desktop@1x.webp 1x, images/promo/espresso-desktop@2x.webp 2x">
+                    <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/promo/espresso-tablet@1x.webp 1x, images/promo/espresso-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="images/promo/espresso-mobile@1x.webp 1x, images/promo/espresso-mobile@2x.webp 2x">
+                    <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/promo/espresso-desktop@1x.png 1x, images/promo/espresso-desktop@2x.png 2x">
+                    <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/promo/espresso-tablet@1x.png 1x, images/promo/espresso-tablet@2x.png 2x">
+                    <img class="promo-product__image" src="images/promo/espresso-mobile@1x.png" srcset="images/promo/espresso-mobile@2x.png" width="280" height="280" alt="Тройной Эспрессо">
+                  </picture>
+                  <p class="promo-product__label label">Новинка!</p>
+                  <h3 class="promo-product__title">Тройной Эспрессо</h3>
+                  <div class="promo-product__subtitle">
+                    <p class="promo-product__subtitle-item">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
+                  </div>
+                  <p class="promo-product__price">
+                    <span class="promo-product__price-item promo-product__price-item--old">395&#8381;</span>
+                    <span class="promo-product__price-item promo-product__price-item--current">375&#8381;</span>
+                  </p>
+                  <a class="promo-product__link button" href="#">Заказать</a>
+                </div>
+              </li>
+          </ul>
+          <button class="declaration__button declaration__button--previous"><span class="visually-hidden">Предыдущий слайд</span></button>
+          <button class="declaration__button declaration__button--next"><span class="visually-hidden">Следующий слайд</span></button>
+          <div class="declaration__slider">
+            <ul class="slider">
+              <li class="slider__item">
+                <label class="slider__label">
+                  <input class="slider__input" type="radio"  name="declaration" value="flat white" checked>
+                  <span class="slider__mark"></span>
+                  <span class="visually-hidden">Новинка Флет Уайт</span>
+                </label>
+              </li>
+              <li class="slider__item">
+                <label class="slider__label">
+                  <input class="slider__input" type="radio"  name="declaration" value="latte">
+                  <span class="slider__mark"></span>
+                  <span class="visually-hidden">Новинка Лавандовый Латте</span>
+                </label>
+              </li>
+              <li class="slider__item">
+                <label class="slider__label">
+                  <input class="slider__input" type="radio"  name="declaration" value="espresso">
+                  <span class="slider__mark"></span>
+                  <span class="visually-hidden">Новинка Тройной Эспрессо</span>
+                </label>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
       <section class="advantages">
         <p class="advantages__label label">Преимущества</p>
@@ -156,37 +185,31 @@
           <fieldset class="filter-group">
             <legend class="filter-group__title">Цена</legend>
             <div class="filter-group__range period-range">
-              <div class="period-range__wrapper">
-                <div class="period-range__bar" style="left: 0; width: 210px">
-                  <button class="period-range__toggle period-range__toggle-min" type="button">
-                    <span class="visually-hidden">Изменить минимальную цену.</span>
-                  </button>
-                  <button class="period-range__toggle period-range__toggle-max" type="button">
-                    <span class="visually-hidden">Изменить максимальную цену.</span>
-                  </button>
-                </div>
-              </div>
-              <ul class="filter-group__period period-value">
-                <li class="period-value__item">
-                  <label class="period-value__wrapper">
-                    <span class="period-value__label visually-hidden">от</span>
-                    <input class="period-value__input"
-                            type="number"
-                            placeholder="0"
-                            name="min-price">
-                  </label>
-                </li>
-                <li class="period-value__item"><span class="period-value__item-divider"></span></li>
-                <li class="period-value__item">
-                  <label class="period-value__wrapper">
-                    <span class="period-value__label visually-hidden">до</span>
-                    <input class="period-value__input"
-                            type="number"
-                            value="900"
-                            name="max-price">
-                  </label>
-                </li>
-              </ul>
+              <div class="period-range__slider" id="slider"></div>
+            </div>
+            <ul class="filter-group__period period-value">
+              <li class="period-value__item">
+                <label class="period-value__wrapper">
+                  <span class="period-value__label visually-hidden">от</span>
+                  <input class="period-value__input"
+                          type="number"
+                          placeholder="0"
+                          id="min-price"
+                          name="min-price">
+                </label>
+              </li>
+              <li class="period-value__item"><span class="period-value__item-divider"></span></li>
+              <li class="period-value__item">
+                <label class="period-value__wrapper">
+                  <span class="period-value__label visually-hidden">до</span>
+                  <input class="period-value__input"
+                          type="number"
+                          value="900"
+                          id="max-price"
+                          name="max-price">
+                </label>
+              </li>
+            </ul>
             </div>
           </fieldset>
           <fieldset class="filter-group">
@@ -403,7 +426,7 @@
   <footer class="footer">
     <div class="footer-wrapper">
       <section class="links">
-        <h2 class="visually-hidden">Наши социальные сети</h2>
+        <h4 class="visually-hidden">Наши социальные сети</h4>
         <a class="links__logo logo" href="index.html">
           <picture class="logo__image-wrapper">
             <source width="170" height="36" type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo/company-logo-desktop.svg">
@@ -430,7 +453,7 @@
         </ul>
       </section>
       <section class="footer-navigation">
-        <h2 class="footer-navigation__title">Интернет-магазин</h2>
+        <h4 class="footer-navigation__title">Интернет-магазин</h4>
         <ul class="footer-navigation__list">
           <li class="footer-navigation__item">
             <a class="footer-navigation__link" href="#">Каталог</a>
@@ -447,7 +470,7 @@
         </ul>
       </section>
       <section class="media">
-        <h2 class="media__title">Медиа</h2>
+        <h4 class="media__title">Медиа</h4>
         <ul class="media__list">
           <li class="media__item">
             <a class="media__link"  href="#">Блог</a>
@@ -461,7 +484,7 @@
         </ul>
       </section>
       <section class="contacts">
-        <h2 class="contacts__title">Контакты</h2>
+        <h4 class="contacts__title">Контакты</h4>
         <ul class="contacts__list">
           <li class="contacts__item">
             <address class="contacts__address">
@@ -476,9 +499,9 @@
         </ul>
       </section>
       <section class="developers">
-        <h2 class="developers__title">
+        <h4 class="developers__title">
           Разработано в<a class="developers__link" href="https://htmlacademy.ru">HTML Academy</a>
-        </h2>
+        </h4>
       </section>
     </div>
   </footer>

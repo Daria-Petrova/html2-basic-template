@@ -5,6 +5,17 @@
   text-align: center;
   width: 100%;
   border-top: 1px solid $color-base-secondary;
+  position: absolute;
+  top: 60px;
+  z-index: 2;
+
+  &--closed {
+    display: none;
+
+    @include tablet-size {
+      display: flex;
+    }
+  }
 
   @include tablet-size {
     display: flex;
@@ -12,6 +23,7 @@
     flex-wrap: wrap;
     justify-content: center;
     border-top: none;
+    position: initial;
   }
 }
 

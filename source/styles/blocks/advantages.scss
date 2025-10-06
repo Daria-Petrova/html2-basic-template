@@ -13,7 +13,7 @@
 
 .advantages__label {
   @include desktop-size {
-    max-width: 1440px;
+    max-width: $desktop;
     margin: 0 auto;
   }
 }
@@ -29,7 +29,7 @@
   }
 
   @include desktop-size {
-    max-width: 1440px;
+    max-width: $desktop;
     margin: 0 auto 80px;
   }
 }

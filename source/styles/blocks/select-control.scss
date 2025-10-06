@@ -1,8 +1,8 @@
 .select-control {
   box-sizing: border-box;
   font-family: inherit;
-  -webkit-appearance: none;
-  appearance: none;
+  //-webkit-appearance: none;
+  //appearance: none;
   margin: 0;
   cursor: pointer;
   border: none;
@@ -15,15 +15,6 @@
   border-radius: 4px;
   text-transform: lowercase;
   outline-color: transparent;
-
-  &::after {
-    content: "";
-    display: block;
-    width: 12px;
-    height: 10px;
-    background-color: green;
-    mask: url("../../icons/arrow-icon.svg");
-  }
 
   &:focus-visible {
     background-color: $color-base-secondary;
