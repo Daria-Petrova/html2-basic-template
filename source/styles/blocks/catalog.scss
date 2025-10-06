@@ -1,5 +1,9 @@
 .catalog {
   margin: 50px 20px 44px;
+
+  @include tablet-size {
+    margin: 80px 20px 90px;
+  }
 }
 
 .catalog__title {
@@ -7,6 +11,10 @@
   margin: 0 auto 20px;
   padding: 0;
   text-align: center;
+
+  @include tablet-size {
+    font-size: 42px;
+  }
 }
 
 .catalog__filter {
@@ -16,6 +24,14 @@
   gap: 30px;
   max-width: 280px;
   margin-bottom: 40px;
+
+  @include tablet-size {
+    max-width: initial;
+    display: grid;
+    grid-template: 1fr auto/ repeat(3, 1fr);
+    gap: 40px 30px;
+    margin-bottom: 44px;
+  }
 }
 
 .catalog__filter-actions {
@@ -23,10 +39,17 @@
   flex-direction: column;
   gap: 20px;
   max-width: 280px;
+
+  @include tablet-size {
+    max-width: initial;
+    grid-column: 1/-1;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .catalog__filter-button {
-  outline: none;
+  outline-color: transparent;
   border: none;
 }
 
@@ -39,6 +62,11 @@
   position: relative;
   justify-content: space-between;
   align-items: center;
+
+  @include tablet-size {
+    justify-self: right;
+    margin-bottom: 30px;
+  }
 }
 
 .catalog__sort-title {
@@ -54,12 +82,26 @@
   list-style: none;
   margin: 0 0 40px;
   padding: 0;
+
+  @include tablet-size {
+    max-width: initial;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 70px;
+  }
 }
 
 .catalog__item {
   background-color: $color-base-main;
   padding: 40px 20px 20px;
   border-radius: 4px;
+
+  @include tablet-size {
+    max-width: 349px;
+    padding: 50px 30px 30px;
+    display: grid;
+    grid: 1fr/ 1fr;
+  }
 }
 
 .catalog__pagination {
@@ -70,6 +112,12 @@
   flex-direction: row;
   justify-content: space-between;
   width: 280px;
+
+  @include tablet-size {
+    width: 395px;
+    margin: 0;
+    justify-self: right;
+  }
 }
 
 .catalog__pagination-item {
@@ -90,7 +138,7 @@
   @include font(16px, 1.5, 400, $color-base-primary);
   background-color: $color-base-main;
   transition: background-color 0.3s ease-in-out;
-  outline: none;
+  outline-color: transparent;
 
   &--current {
     background-color: transparent;
@@ -104,7 +152,7 @@
 
   &:has(.catalog__pagination-text--previous) {
     justify-items: center;
-    &::before{
+    &::before {
       content: "";
       display: block;
       width: 10px;
@@ -120,6 +168,13 @@
     &:disabled {
       &::before {
         background-color: $color-base-main;
+      }
+    }
+
+    @include tablet-size {
+      padding: 8px 20px;
+      &:before {
+        display: none;
       }
     }
   }
@@ -145,6 +200,13 @@
         background-color: $color-base-main;
       }
     }
+
+    @include tablet-size {
+      padding: 8px 20px;
+      &:after {
+        display: none;
+      }
+    }
   }
 
   &:hover,
@@ -168,4 +230,8 @@
 
 .catalog__pagination-text {
   display: none;
+
+  @include tablet-size {
+    display: initial;
+  }
 }

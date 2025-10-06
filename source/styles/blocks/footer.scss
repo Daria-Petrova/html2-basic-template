@@ -1,11 +1,27 @@
 .footer {
   background-color: $color-base-main;
   padding-bottom: 10px;
+
+  @include tablet-size {
+    display: grid;
+    grid-template: auto 1fr auto/ repeat(3, 1fr);
+    grid-template-areas:
+      "links             links      links"
+      "footer-navigation media      contacts "
+      "developers        developers developers";
+    gap: 0 30px;
+  }
 }
 
 .footer-navigation {
   padding: 20px;
   border-bottom: 1px solid $color-base-secondary;
+
+  @include tablet-size {
+    grid-area: footer-navigation;
+    padding: 0 0 0 20px;
+    border-bottom: none;
+  }
 }
 
 .footer-navigation__title {

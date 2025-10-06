@@ -31,7 +31,7 @@
   @include font(12px, 1.3, 500, $color-base);
   background-color: $color-base-main;
   transition: background-color 0.3s;
-  outline: none;
+  outline-color: transparent;
 
   &:hover,
   &:focus-visible {
@@ -42,6 +42,7 @@
 
   @include tablet-size {
     padding: 32px 20px;
+    outline-color: $color-base;
 
     &--active {
       color: $color-base-primary;

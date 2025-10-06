@@ -30,7 +30,7 @@
   cursor: pointer;
   background-color: transparent;
   transition: background-color 0.3s;
-  outline: none;
+  outline-color: transparent;
 
   &:hover,
   &:focus-visible {

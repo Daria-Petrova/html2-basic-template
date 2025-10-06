@@ -18,4 +18,18 @@
   &--espresso {
     background-color: $color-background-espresso;
   }
+
+  @include tablet-size {
+    &--flat {
+      background-image: linear-gradient(to top, $color-base-main 188px, $color-background-flat 188px);
+    }
+
+    &--latte {
+      background-image: linear-gradient(to top, $color-base-main 188px, $color-background-lavender 188px);
+    }
+
+    &--espresso {
+      background-image: linear-gradient(to top, $color-base-main 188px, $color-background-espresso 188px);
+    }
+  }
 }

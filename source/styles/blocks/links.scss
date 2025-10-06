@@ -5,6 +5,12 @@
   padding: 22px 20px;
   gap: 15px;
   border-bottom: 1px solid $color-base-secondary;
+
+  @include tablet-size {
+    padding: 40px 20px 30px;
+    grid-area: links;
+    border-bottom: none;
+  }
 }
 
 .links__social {
@@ -23,7 +29,7 @@
   padding: 10px;
   display: block;
   border-radius: 4px;
-  outline: none;
+  outline-color: transparent;
 
   &::before {
     content: "";

@@ -1,5 +1,10 @@
 .developers {
   margin: 20px;
+
+  @include tablet-size {
+    grid-area: developers;
+    margin: 30px;
+  }
 }
 
 .developers__title {
