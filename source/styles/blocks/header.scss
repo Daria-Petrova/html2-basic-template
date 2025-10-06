@@ -17,6 +17,11 @@
     "logo navigation actions";
     gap: 30px;
   }
+
+  @include desktop-size {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
 
 .header__logo {
@@ -24,12 +29,20 @@
   display: block;
   align-content: center;
   margin: 0 20px;
+
+  @include desktop-size {
+    text-decoration: none;
+  }
+  @include desktop-size {
+   margin: 0 0 0 40px;
+  }
 }
 
 .header__action-list {
   grid-area: actions;
   align-content: center;
   justify-self: right;
+  margin: 0;
 }
 
 .header__toggle {

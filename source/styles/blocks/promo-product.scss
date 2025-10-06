@@ -1,5 +1,6 @@
 .promo-product {
-  margin: 20px 20px 50px;
+  margin: 20px auto 50px;
+  padding: 0 20px;
   display: grid;
   grid-template: repeat(5, auto)/ 1fr 1fr;
   grid-template-areas:
@@ -11,7 +12,8 @@
   column-gap: 20px;
 
   @include tablet-size {
-    margin: 60px 20px 0;
+    margin: 60px auto 0;
+    padding: 0 20px;
     grid-template-areas:
       "label label"
       "title title"
@@ -19,6 +21,21 @@
       "price link"
       "price link"
       "image image";
+  }
+
+  @include desktop-size {
+    max-width: 1440px;
+    margin: 0 auto 60px;
+    padding: 0 80px 105px;
+    grid-template: 150px repeat(5, auto)/ 600px auto 1fr;
+    grid-template-areas:
+      "image .        ."
+      "image label    label"
+      "image title    title"
+      "image subtitle subtitle"
+      "image price    link"
+      "image .        .";
+
   }
 }
 
@@ -29,6 +46,10 @@
   @include tablet-size {
     margin: 20px auto 0;
   }
+
+  @include desktop-size {
+    margin-top: 30px;
+  }
 }
 
 .promo-product__image {
@@ -38,6 +59,11 @@
 
 .promo-product__label {
   grid-area: label;
+
+  @include desktop-size {
+    margin-left: 10px;
+    text-align: left;
+  }
 }
 
 .promo-product__title {
@@ -51,6 +77,11 @@
     line-height: 1.4;
     margin-bottom: 16px;
   }
+
+  @include desktop-size {
+    margin-left: 10px;
+    text-align: left;
+  }
 }
 
 .promo-product__subtitle {
@@ -58,6 +89,11 @@
 
   @include tablet-size {
     justify-items: center;
+  }
+
+  @include desktop-size {
+    margin: 0 0 20px 10px;
+    justify-items: left;
   }
 }
 
@@ -72,6 +108,11 @@
     line-height: 1.6;
     margin-bottom: 20px;
   }
+
+  @include desktop-size {
+    max-width: 620px;
+    text-align: left;
+  }
 }
 
 .promo-product__price {
@@ -79,6 +120,10 @@
   margin: 0;
   text-align: end;
   align-content: center;
+
+  @include desktop-size {
+    margin-left: 10px;
+  }
 }
 
 .promo-product__price-item {

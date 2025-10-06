@@ -11,6 +11,21 @@
     grid-area: links;
     border-bottom: none;
   }
+
+  @include desktop-size {
+    background-color: $color-base-main;
+    padding: 40px 0 0 40px;
+    flex-direction: column;
+  }
+}
+
+.links__logo {
+  @include desktop-size {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-decoration: none;
+  }
 }
 
 .links__social {
@@ -23,6 +38,10 @@
   justify-content: right;
   align-self: center;
   gap: 5px 20px;
+
+  @include desktop-size {
+    align-self: start;
+  }
 }
 
 .links__social-link {

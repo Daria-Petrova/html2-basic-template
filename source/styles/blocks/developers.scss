@@ -5,6 +5,10 @@
     grid-area: developers;
     margin: 30px;
   }
+
+  @include desktop-size{
+    margin: 20px;
+  }
 }
 
 .developers__title {

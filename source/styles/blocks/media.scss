@@ -7,6 +7,11 @@
     padding: 0;
     border-bottom: none;
   }
+
+  @include desktop-size {
+    background-color: $color-base-main;
+    padding: 46px 0 0;
+  }
 }
 
 .media__title {

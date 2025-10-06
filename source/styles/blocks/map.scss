@@ -18,6 +18,10 @@
   @include tablet-size {
     max-height: 480px;
   }
+
+  @include desktop-size {
+    max-height: 540px;
+  }
 }
 
 .map__image {

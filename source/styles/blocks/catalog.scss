@@ -4,8 +4,27 @@
   @include tablet-size {
     margin: 80px 20px 90px;
   }
+
+  @include desktop-size {
+    max-width: 1440px;
+    margin: 100px auto 120px;
+    display: grid;
+    grid-template: repeat(5, auto)/ auto 1fr;
+    grid-template-areas:
+      "label label"
+      "title title"
+      "form sort"
+      "form list"
+      "form pagination";
+    column-gap: 30px;
+  }
 }
 
+.catalog__label {
+  @include desktop-size{
+    grid-area: label;
+  }
+}
 .catalog__title {
   @include font(24px, 1.5, 700, $color-base);
   margin: 0 auto 20px;
@@ -14,6 +33,11 @@
 
   @include tablet-size {
     font-size: 42px;
+  }
+
+  @include desktop-size{
+    grid-area: title;
+    margin-bottom: 40px;
   }
 }
 
@@ -31,6 +55,15 @@
     grid-template: 1fr auto/ repeat(3, 1fr);
     gap: 40px 30px;
     margin-bottom: 44px;
+  }
+
+  @include desktop-size {
+    width: 318px;
+    grid-template: repeat(4, auto)/ 1fr;
+    grid-area: form;
+    align-content: start;
+    justify-self: left;
+    margin-left: 40px;
   }
 }
 
@@ -67,6 +100,11 @@
     justify-self: right;
     margin-bottom: 30px;
   }
+
+  @include desktop-size {
+    grid-area: sort;
+    margin: 0 40px 26px 0;
+  }
 }
 
 .catalog__sort-title {
@@ -89,18 +127,36 @@
     gap: 30px;
     margin-bottom: 70px;
   }
+
+  @include desktop-size {
+    grid-area: list;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-self: start;
+    margin-bottom: 60px;
+  }
 }
 
 .catalog__item {
   background-color: $color-base-main;
   padding: 40px 20px 20px;
   border-radius: 4px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0);
+  transition: box-shadow 0.3s;
 
   @include tablet-size {
     max-width: 349px;
     padding: 50px 30px 30px;
     display: grid;
     grid: 1fr/ 1fr;
+  }
+
+  @include desktop-size {
+    max-width: 317px;
+
+    &:hover {
+      box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+      transition: box-shadow 0.3s;
+    }
   }
 }
 
@@ -117,6 +173,10 @@
     width: 395px;
     margin: 0;
     justify-self: right;
+  }
+
+  @include desktop-size {
+    margin-right: 40px;
   }
 }
 
@@ -225,6 +285,10 @@
     color: $color-base-main;
     background-color: $color-base-hide-light;
     cursor: default;
+  }
+
+  @include desktop-size {
+    grid-area: pagination;
   }
 }
 
