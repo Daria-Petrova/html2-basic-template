@@ -15,6 +15,10 @@
   width: 130px;
   justify-self: center;
   margin-bottom: 26px;
+
+  @include tablet-size {
+    margin-bottom: 33px;
+  }
 }
 
 .product__image {
@@ -30,6 +34,12 @@
 .product__title {
   margin: 0;
   @include font(18px, 1.7, 700, $color-base);
+
+  @include tablet-size {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 6px;
+  }
 }
 
 .product__description {

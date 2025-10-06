@@ -16,6 +16,7 @@
     grid-template-areas:
     "logo navigation actions";
     gap: 30px;
+    margin: 0 20px;
   }
 
   @include desktop-size {
@@ -30,11 +31,13 @@
   align-content: center;
   margin: 0 20px;
 
-  @include desktop-size {
-    text-decoration: none;
+  @include tablet-size {
+    margin: 0;
   }
+
   @include desktop-size {
    margin: 0 0 0 40px;
+    text-decoration: none;
   }
 }
 

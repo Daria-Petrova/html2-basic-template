@@ -3,11 +3,11 @@
 
   @include tablet-size {
     grid-area: developers;
-    margin: 30px;
+    margin: 38px 30px 30px;
   }
 
   @include desktop-size{
-    margin: 20px;
+    margin: 20px 20px 20px 20px;
   }
 }
 

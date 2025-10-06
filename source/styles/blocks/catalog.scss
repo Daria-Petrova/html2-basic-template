@@ -101,7 +101,8 @@
 
   @include tablet-size {
     justify-self: right;
-    margin-bottom: 30px;
+    margin-bottom: 26px;
+    gap: 10px;
   }
 
   @include desktop-size {
@@ -128,7 +129,7 @@
     max-width: initial;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
-    margin-bottom: 70px;
+    margin-bottom: 72px;
   }
 
   @include desktop-size {

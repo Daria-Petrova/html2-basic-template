@@ -50,6 +50,10 @@ input[type='number'] {
   &:active {
     border-color: $color-base-primary-dark;
   }
+
+  @include tablet-size {
+    max-width: 87px;
+  }
 }
 
 .period-value__item-divider {
