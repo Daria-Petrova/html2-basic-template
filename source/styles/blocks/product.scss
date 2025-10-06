@@ -14,7 +14,7 @@
   display: block;
   width: 130px;
   justify-self: center;
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 
 .product__image {
@@ -35,13 +35,13 @@
 .product__description {
   grid-area: description;
   margin: 0 0 16px;
-  @include font(14px, 1.4, 400, $color-base);
+  @include font(14px, 1.45, 400, $color-base);
 }
 
 .product__price {
   grid-area: price;
   margin: 0;
-  @include font(16px, 1.6, 600, $color-base);
+  @include font(20px, 1.6, 600, $color-base);
   align-content: center;
 }
 

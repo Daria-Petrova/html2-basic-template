@@ -1,8 +1,6 @@
 .select-control {
   box-sizing: border-box;
   font-family: inherit;
-  //-webkit-appearance: none;
-  //appearance: none;
   margin: 0;
   cursor: pointer;
   border: none;
@@ -15,6 +13,7 @@
   border-radius: 4px;
   text-transform: lowercase;
   outline-color: transparent;
+  max-width: 165px;
 
   &:focus-visible {
     background-color: $color-base-secondary;

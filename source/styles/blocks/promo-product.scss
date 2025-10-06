@@ -1,5 +1,5 @@
 .promo-product {
-  padding: 20px 20px 50px;
+  padding: 20px 19px 60px;
   display: grid;
   grid-template: repeat(5, auto)/ 1fr 1fr;
   grid-template-areas:
@@ -8,7 +8,7 @@
     "title    title"
     "subtitle subtitle"
     "price    link";
-  column-gap: 20px;
+  column-gap: 1px;
 
   @include tablet-size {
     padding: 60px 20px 0;
@@ -19,6 +19,7 @@
       "price link"
       "price link"
       "image image";
+    column-gap: 20px;
   }
 
   @include desktop-size {
@@ -32,6 +33,7 @@
       "image subtitle subtitle"
       "image price    link"
       "image .        .";
+    column-gap: 20px;
   }
 }
 
@@ -94,8 +96,8 @@
 }
 
 .promo-product__subtitle-item {
-  margin: 0 0 10px;
-  @include font(14px, 1.4, 400, $color-base);
+  margin: 0 0 18px;
+  @include font(14px, 1.45, 400, $color-base);
   text-align: center;
 
   @include tablet-size {
@@ -113,7 +115,7 @@
 
 .promo-product__price {
   grid-area: price;
-  margin: 0;
+  margin: 0 20px 0 0;
   text-align: end;
   align-content: center;
 
@@ -135,7 +137,7 @@
 
 .promo-product__link {
   grid-area: link;
-  margin: 10px 0;
+  margin: 0;
   width: 113px;
 
   @include tablet-size {

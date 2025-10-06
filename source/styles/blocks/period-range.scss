@@ -1,10 +1,14 @@
+.period-range {
+  margin-top: 10px;
+}
+
 .period-range__slider {
   width: 280px !important;
   cursor: pointer;
   height: 2px !important;
   border: none;
   background-color: $color-base-hide-light;
-  margin-bottom: 30px !important;
+  margin-bottom: 35px !important;
 
   @include tablet-size {
     width: 223px !important;
@@ -20,8 +24,17 @@
     border-radius: 50% !important;
     border: 2px solid $color-base-primary-light;
     top: -12px !important;
+
     box-shadow: none !important;
-    background-color: $color-base-main ;
+    background-color: $color-base-main;
+
+    &.noUi-handle-lower {
+      right: -23px !important;
+    }
+
+    &.noUi-handle-upper {
+      right: -9px !important;
+    }
   }
 
   .noUi-connect {

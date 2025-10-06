@@ -31,12 +31,12 @@
 .contacts__address {
   display: grid;
   grid-template: 1fr/ 16px 1fr;
-  gap: 6px;
+  gap: 3px;
 
   &::before {
     content: "";
     display: block;
-    width: 20px;
+    width: 13px;
     height: 16px;
     background-color: $color-base-primary;
   }
