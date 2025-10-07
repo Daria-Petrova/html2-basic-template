@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <title>Название проекта</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="preload" href="#" type="font/woff2" as="font">
+    <link rel="preload" href="fonts/montserrat/Montserrat-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat/Montserrat-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat/Montserrat-ExtraBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat/Montserrat-Medium.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/montserrat/Montserrat-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="vendor/nouislider/nouislider.css">
     <link rel="stylesheet" href="styles/styles.css">
     <script src="scripts/index.js" defer></script>
@@ -60,72 +64,72 @@
         <h2 class="visually-hidden">Новинки в нашем магазине кофейных напитков</h2>
         <div class="declaration__wrapper">
           <ul class="declaration__list" aria-live="polite">
-            <li class="declaration__item declaration__item--flat declaration__item--active">
-                <div class="promo-product">
-                  <picture class="promo-product__image-fake">
-                    <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/promo/flat-white-desktop@1x.webp 1x, images/promo/flat-white-desktop@2x.webp 2x">
-                    <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/promo/flat-white-tablet@1x.webp 1x, images/promo/flat-white-tablet@2x.webp 2x">
-                    <source width="280" height="280" type="image/webp" srcset="images/promo/flat-white-mobile@1x.webp 1x, images/promo/flat-white-mobile@2x.webp 2x">
-                    <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/promo/flat-white-desktop@1x.png 1x, images/promo/flat-white-desktop@2x.png 2x">
-                    <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/promo/flat-white-tablet@1x.png 1x, images/promo/flat-white-tablet@2x.png 2x">
-                    <img class="promo-product__image" src="images/promo/flat-white-mobile@1x.png" srcset="images/promo/flat-white-mobile@2x.png" width="280" height="280" alt="Декаф Флэт Уайт">
-                  </picture>
-                  <p class="promo-product__label label">Новинка!</p>
-                  <h3 class="promo-product__title">Декаф Флэт Уайт</h3>
-                  <div class="promo-product__subtitle">
-                    <p class="promo-product__subtitle-item">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
-                  </div>
-                  <p class="promo-product__price">
-                    <span class="promo-product__price-item promo-product__price-item--old">295&#8381;</span>
-                    <span class="promo-product__price-item promo-product__price-item--current">225&#8381;</span>
-                  </p>
-                  <a class="promo-product__link button" href="#">Заказать</a>
+            <li class="declaration__item declaration__item--flat declaration__item--active" id="promo-slider1">
+              <div class="promo-product">
+                <picture class="promo-product__image-fake">
+                  <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/promo/flat-white-desktop@1x.webp 1x, images/promo/flat-white-desktop@2x.webp 2x">
+                  <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/promo/flat-white-tablet@1x.webp 1x, images/promo/flat-white-tablet@2x.webp 2x">
+                  <source width="280" height="280" type="image/webp" srcset="images/promo/flat-white-mobile@1x.webp 1x, images/promo/flat-white-mobile@2x.webp 2x">
+                  <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/promo/flat-white-desktop@1x.png 1x, images/promo/flat-white-desktop@2x.png 2x">
+                  <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/promo/flat-white-tablet@1x.png 1x, images/promo/flat-white-tablet@2x.png 2x">
+                  <img class="promo-product__image" src="images/promo/flat-white-mobile@1x.png" srcset="images/promo/flat-white-mobile@2x.png" width="280" height="280" alt="Декаф Флэт Уайт">
+                </picture>
+                <p class="promo-product__label label">Новинка!</p>
+                <h3 class="promo-product__title">Декаф Флэт Уайт</h3>
+                <div class="promo-product__subtitle">
+                  <p class="promo-product__subtitle-item">Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским молоком — то, что нужно для расслабления после тяжёлого рабочего дня</p>
                 </div>
-              </li>
-            <li class="declaration__item declaration__item--latte">
-                <div class="promo-product">
-                  <picture class="promo-product__image-fake">
-                    <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/promo/lavender-latte-desktop@1x.webp 1x, images/promo/lavender-latte-desktop@2x.webp 2x">
-                    <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/promo/lavender-latte-tablet@1x.webp 1x, images/promo/lavender-latte-tablet@2x.webp 2x">
-                    <source width="280" height="280" type="image/webp" srcset="images/promo/lavender-latte-mobile@1x.webp 1x, images/promo/lavender-latte-mobile@2x.webp 2x">
-                    <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/promo/lavender-latte-desktop@1x.png 1x, images/promo/lavender-latte-desktop@2x.png 2x">
-                    <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/promo/lavender-latte-tablet@1x.png 1x, images/promo/lavender-latte-tablet@2x.png 2x">
-                    <img class="promo-product__image" src="images/promo/lavender-latte-mobile@1x.png" srcset="images/promo/lavender-latte-mobile@2x.png" width="280" height="280" alt="Лавандовый Латте">
-                  </picture>
-                  <p class="promo-product__label label">Новинка!</p>
-                  <h3 class="promo-product__title">Лавандовый Латте</h3>
-                  <div class="promo-product__subtitle">
-                    <p class="promo-product__subtitle-item">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
-                  </div>
-                  <p class="promo-product__price">
-                    <span class="promo-product__price-item promo-product__price-item--old">285&#8381;</span>
-                    <span class="promo-product__price-item promo-product__price-item--current">265&#8381;</span>
-                  </p>
-                  <a class="promo-product__link button" href="#">Заказать</a>
+                <p class="promo-product__price">
+                  <span class="promo-product__price-item promo-product__price-item--old">295&#8381;</span>
+                  <span class="promo-product__price-item promo-product__price-item--current">225&#8381;</span>
+                </p>
+                <a class="promo-product__link button" href="#">Заказать</a>
+              </div>
+            </li>
+            <li class="declaration__item declaration__item--latte" id="promo-slider2">
+              <div class="promo-product">
+                <picture class="promo-product__image-fake">
+                  <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/promo/lavender-latte-desktop@1x.webp 1x, images/promo/lavender-latte-desktop@2x.webp 2x">
+                  <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/promo/lavender-latte-tablet@1x.webp 1x, images/promo/lavender-latte-tablet@2x.webp 2x">
+                  <source width="280" height="280" type="image/webp" srcset="images/promo/lavender-latte-mobile@1x.webp 1x, images/promo/lavender-latte-mobile@2x.webp 2x">
+                  <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/promo/lavender-latte-desktop@1x.png 1x, images/promo/lavender-latte-desktop@2x.png 2x">
+                  <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/promo/lavender-latte-tablet@1x.png 1x, images/promo/lavender-latte-tablet@2x.png 2x">
+                  <img class="promo-product__image" src="images/promo/lavender-latte-mobile@1x.png" srcset="images/promo/lavender-latte-mobile@2x.png" width="280" height="280" alt="Лавандовый Латте">
+                </picture>
+                <p class="promo-product__label label">Новинка!</p>
+                <h3 class="promo-product__title">Лавандовый Латте</h3>
+                <div class="promo-product__subtitle">
+                  <p class="promo-product__subtitle-item">Невероятное сочетание перуанской высокогорной арабики с молоком ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных гор</p>
                 </div>
-              </li>
-            <li class="declaration__item declaration__item--espresso">
-                <div class="promo-product">
-                  <picture class="promo-product__image-fake">
-                    <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/promo/espresso-desktop@1x.webp 1x, images/promo/espresso-desktop@2x.webp 2x">
-                    <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/promo/espresso-tablet@1x.webp 1x, images/promo/espresso-tablet@2x.webp 2x">
-                    <source width="280" height="280" type="image/webp" srcset="images/promo/espresso-mobile@1x.webp 1x, images/promo/espresso-mobile@2x.webp 2x">
-                    <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/promo/espresso-desktop@1x.png 1x, images/promo/espresso-desktop@2x.png 2x">
-                    <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/promo/espresso-tablet@1x.png 1x, images/promo/espresso-tablet@2x.png 2x">
-                    <img class="promo-product__image" src="images/promo/espresso-mobile@1x.png" srcset="images/promo/espresso-mobile@2x.png" width="280" height="280" alt="Тройной Эспрессо">
-                  </picture>
-                  <p class="promo-product__label label">Новинка!</p>
-                  <h3 class="promo-product__title">Тройной Эспрессо</h3>
-                  <div class="promo-product__subtitle">
-                    <p class="promo-product__subtitle-item">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
-                  </div>
-                  <p class="promo-product__price">
-                    <span class="promo-product__price-item promo-product__price-item--old">395&#8381;</span>
-                    <span class="promo-product__price-item promo-product__price-item--current">375&#8381;</span>
-                  </p>
-                  <a class="promo-product__link button" href="#">Заказать</a>
+                <p class="promo-product__price">
+                  <span class="promo-product__price-item promo-product__price-item--old">285&#8381;</span>
+                  <span class="promo-product__price-item promo-product__price-item--current">265&#8381;</span>
+                </p>
+                <a class="promo-product__link button" href="#">Заказать</a>
+              </div>
+            </li>
+            <li class="declaration__item declaration__item--espresso" id="promo-slider3">
+              <div class="promo-product">
+                <picture class="promo-product__image-fake">
+                  <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/promo/espresso-desktop@1x.webp 1x, images/promo/espresso-desktop@2x.webp 2x">
+                  <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/promo/espresso-tablet@1x.webp 1x, images/promo/espresso-tablet@2x.webp 2x">
+                  <source width="280" height="280" type="image/webp" srcset="images/promo/espresso-mobile@1x.webp 1x, images/promo/espresso-mobile@2x.webp 2x">
+                  <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/promo/espresso-desktop@1x.png 1x, images/promo/espresso-desktop@2x.png 2x">
+                  <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/promo/espresso-tablet@1x.png 1x, images/promo/espresso-tablet@2x.png 2x">
+                  <img class="promo-product__image" src="images/promo/espresso-mobile@1x.png" srcset="images/promo/espresso-mobile@2x.png" width="280" height="280" alt="Тройной Эспрессо">
+                </picture>
+                <p class="promo-product__label label">Новинка!</p>
+                <h3 class="promo-product__title">Тройной Эспрессо</h3>
+                <div class="promo-product__subtitle">
+                  <p class="promo-product__subtitle-item">Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной эспрессо из Колумбии покажет вам, что такое настоящая бодрость</p>
                 </div>
-              </li>
+                <p class="promo-product__price">
+                  <span class="promo-product__price-item promo-product__price-item--old">395&#8381;</span>
+                  <span class="promo-product__price-item promo-product__price-item--current">375&#8381;</span>
+                </p>
+                <a class="promo-product__link button" href="#">Заказать</a>
+              </div>
+            </li>
           </ul>
           <button class="declaration__button declaration__button--previous" type="button"><span class="visually-hidden">Предыдущий слайд</span></button>
           <button class="declaration__button declaration__button--next" type="button"><span class="visually-hidden">Следующий слайд</span></button>

@@ -159,6 +159,11 @@
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0);
   transition: box-shadow 0.3s;
 
+  &:hover {
+    box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s;
+  }
+
   @include tablet-size {
     max-width: 349px;
     padding: 50px 30px 30px;
@@ -168,11 +173,6 @@
 
   @include desktop-size {
     max-width: 317px;
-
-    &:hover {
-      box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
-      transition: box-shadow 0.3s;
-    }
   }
 }
 
