@@ -76,7 +76,6 @@
       grid-column: 1/-1;
       margin-bottom: 10px;
     }
-
   }
 
   &--speed {
@@ -84,16 +83,19 @@
       background: url("../../icons/clock-icon.svg");
     }
   }
+
   &--convenience {
     &::before {
       background: url("../../icons/fit-icon.svg");
     }
   }
+
   &--cheerfulness {
     &::before {
       background: url("../../icons/energy-icon.svg");
     }
   }
+
   &--environment {
     &::before {
       background: url("../../icons/ecology-icon.svg");
@@ -114,6 +116,7 @@
 
 .advantages__item-title {
   margin: 10px auto 4px;
+
   @include font(18px, 1.7, 700, $color-base);
   text-align: center;
 
@@ -134,6 +137,7 @@
 .advantages__item-subtitle {
   margin: 0;
   text-align: center;
+
   @include font(14px, 1.4, 400, $color-base);
 
   @include tablet-size {

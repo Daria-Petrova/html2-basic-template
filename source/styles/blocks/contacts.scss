@@ -17,6 +17,7 @@
 
 .contacts__title {
   margin: 0 0 20px;
+
   @include font(14px, 1.4, 700, $color-base-primary);
 }
 

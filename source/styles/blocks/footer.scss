@@ -4,12 +4,13 @@
 
 .footer-wrapper {
   padding-bottom: 10px;
+
   @include tablet-size {
     display: grid;
     grid-template: auto 1fr auto/ repeat(3, 1fr);
     grid-template-areas:
       "links             links      links"
-      "footer-navigation media      contacts "
+      "footer-navigation media      contacts"
       "developers        developers developers";
     gap: 0 20px;
   }
@@ -44,6 +45,7 @@
 
 .footer-navigation__title {
   margin: 0 0 19px;
+
   @include font(14px, 1.4, 700, $color-base-primary);
 
   @include desktop-size {
@@ -67,6 +69,7 @@
 .footer-navigation__link {
   text-transform: uppercase;
   text-decoration: none;
+
   @include font(12px, 1.3, 500, $color-base);
   transition: color 0.3s;
 

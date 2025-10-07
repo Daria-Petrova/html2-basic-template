@@ -4,8 +4,9 @@
   @include tablet-size {
     width: 100%;
   }
+
   @include desktop-size {
-    max-width: 1440px;
+    max-width: $desktop;
     margin: 0 auto;
   }
 }
@@ -19,6 +20,7 @@
 
 .declaration__item {
   display: none;
+
   &--flat {
     background-color: $color-background-flat;
   }
@@ -68,7 +70,7 @@
 .declaration__controls {
   display: none;
 
-  @include desktop-size{
+  @include desktop-size {
     display: initial;
   }
 }
@@ -91,7 +93,7 @@
     width: 80px;
   }
 
-  &::before{
+  &::before {
     content: "";
     display: block;
     width: 20px;
@@ -106,7 +108,7 @@
 
     &:hover,
     &:focus-visible {
-      background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+      background: linear-gradient(90deg, $color-base-main 0%, rgba(255, 255, 255, 0) 100%);
     }
 
     &:active {
@@ -116,13 +118,14 @@
 
   &--next {
     right: 0;
-    &::before{
+
+    &::before {
       transform: rotate(180deg);
     }
 
     &:hover,
     &:focus-visible {
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%,  #fff 100%);
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, $color-base-main 100%);
     }
 
     &:active {
@@ -130,21 +133,17 @@
     }
   }
 
-
-
   &:disabled {
-    &::before{
+    &::before {
       background-color: $color-base-hide;
     }
   }
-
-
 }
 
 .declaration__slider {
   display: none;
 
-  @include desktop-size{
+  @include desktop-size {
     display: initial;
     position: absolute;
     top: 90%;

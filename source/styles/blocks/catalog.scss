@@ -13,18 +13,19 @@
     grid-template-areas:
       "label label"
       "title title"
-      "form sort"
-      "form list"
-      "form pagination";
+      "form  sort"
+      "form  list"
+      "form  pagination";
     column-gap: 30px;
   }
 }
 
 .catalog__label {
-  @include desktop-size{
+  @include desktop-size {
     grid-area: label;
   }
 }
+
 .catalog__title {
   @include font(24px, 1.5, 700, $color-base);
   margin: 0 auto 17px;
@@ -35,7 +36,7 @@
     font-size: 42px;
   }
 
-  @include desktop-size{
+  @include desktop-size {
     grid-area: title;
     margin-bottom: 36px;
   }
@@ -210,6 +211,7 @@
   height: 40px;
   padding: 0 8px;
   text-decoration: none;
+
   @include font(16px, 1.5, 400, $color-base-primary);
   background-color: $color-base-main;
   transition: background-color 0.3s ease-in-out;
@@ -217,6 +219,7 @@
 
   &--current {
     background-color: transparent;
+
     @include font(16px, 1.5, 600, $color-base);
   }
 
@@ -227,6 +230,7 @@
 
   &:has(.catalog__pagination-text--previous) {
     justify-items: center;
+
     &::before {
       content: "";
       display: block;
@@ -248,7 +252,8 @@
 
     @include tablet-size {
       padding: 8px 20px;
-      &:before {
+
+      &::before {
         display: none;
       }
     }
@@ -256,7 +261,8 @@
 
   &:has(.catalog__pagination-text--next) {
     justify-items: center;
-    &:after {
+
+    &::after {
       content: "";
       display: block;
       width: 10px;
@@ -278,7 +284,8 @@
 
     @include tablet-size {
       padding: 8px 20px;
-      &:after {
+
+      &::after {
         display: none;
       }
     }

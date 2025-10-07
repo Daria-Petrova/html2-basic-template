@@ -13,8 +13,7 @@
 
   @include tablet-size {
     grid-template: minmax(80px, auto)/ auto 1fr auto;
-    grid-template-areas:
-    "logo navigation actions";
+    grid-template-areas: "logo navigation actions";
     gap: 30px;
     margin: 0 20px;
   }
@@ -36,7 +35,7 @@
   }
 
   @include desktop-size {
-   margin: 0 0 0 40px;
+    margin: 0 0 0 40px;
     text-decoration: none;
   }
 }

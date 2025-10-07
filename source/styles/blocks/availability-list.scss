@@ -16,17 +16,19 @@
 .availability-list__label {
   &:hover {
     cursor: pointer;
+
     .availability-list__mark {
       border-color: $color-base-primary-light;
       transition: background-color 0.3s;
     }
+
     .availability-list__mark::before {
       background-color: $color-base-primary-opacity;
       transition: background-color 0.3s;
     }
   }
 
-  &:has(.availability-list__input:disabled){
+  &:has(.availability-list__input:disabled) {
     cursor: default;
     color: $color-base-hide;
   }
@@ -90,10 +92,6 @@
 
 .availability-list__input:active + .availability-list__mark::before {
   background-color: $color-base-primary;
-  transition: background-color 0.3s;
-}
-
-.availability-list__input:active + .availability-list__mark::before {
   border-color: $color-base-primary;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, border-color 0.3s;
 }

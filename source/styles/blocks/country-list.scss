@@ -10,6 +10,7 @@
 .country-list__label {
   &:hover {
     cursor: pointer;
+
     .country-list__mark {
       border-color: $color-base-primary;
       background-color: $color-base-primary-opacity;
@@ -55,7 +56,7 @@
   transition: 0.3s;
 }
 
-.country-list__input:checked + .country-list__mark:before {
+.country-list__input:checked + .country-list__mark::before {
   transform: translateX(18px);
 }
 
@@ -68,7 +69,7 @@
   color: $color-base-hide;
 }
 
-.country-list__input:checked:disabled + .country-list__mark:before {
+.country-list__input:checked:disabled + .country-list__mark::before {
   background-color: $color-base-hide;
 }
 
@@ -77,4 +78,3 @@
   background-color: $color-base-primary-opacity;
   transition: background-color 0.3s;
 }
-

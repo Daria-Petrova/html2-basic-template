@@ -6,8 +6,8 @@
     margin: 38px 30px 30px;
   }
 
-  @include desktop-size{
-    margin: 20px 20px 20px 20px;
+  @include desktop-size {
+    margin: 20px;
   }
 }
 
@@ -18,10 +18,13 @@
   gap: 3px;
   justify-content: center;
   margin: 0;
+
   @include font(12px, 1.3, 400, $color-base-hide);
 }
+
 .developers__link {
   text-decoration: none;
+
   @include font(12px, 1.3, 400, $color-base-hide);
   display: flex;
   flex-direction: row;
@@ -37,13 +40,13 @@
     background-color: $color-base-hide;
     mask: url("../../icons/html-academy-logo-icon.svg");
     transition: background-color 0.3s;
-
   }
 
   &:hover,
   &:focus-visible {
     color: $color-base-primary;
     transition: color 0.3s;
+
     &::after {
       background-color: $color-base-primary;
       transition: background-color 0.3s;
@@ -53,6 +56,7 @@
   &:active {
     color: $color-base-primary-dark;
     transition: color 0.3s;
+
     &::after {
       background-color: $color-base-primary;
       transition: background-color 0.3s;

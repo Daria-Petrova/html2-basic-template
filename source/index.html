@@ -5,8 +5,8 @@
     <title>Название проекта</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="preload" href="#" type="font/woff2" as="font">
+    <link rel="stylesheet" href="vendor/nouislider/nouislider.css">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="vendor/nouislider/nouislider.css" />
     <script src="scripts/index.js" defer></script>
   </head>
   <body class="page__body">
@@ -65,7 +65,7 @@
                   <picture class="promo-product__image-fake">
                     <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/promo/flat-white-desktop@1x.webp 1x, images/promo/flat-white-desktop@2x.webp 2x">
                     <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/promo/flat-white-tablet@1x.webp 1x, images/promo/flat-white-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="images/promo/flat-white-mobile@1x.webp 1x, images/promo/flat-white-mobile@2x.webp 2x">
+                    <source width="280" height="280" type="image/webp" srcset="images/promo/flat-white-mobile@1x.webp 1x, images/promo/flat-white-mobile@2x.webp 2x">
                     <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/promo/flat-white-desktop@1x.png 1x, images/promo/flat-white-desktop@2x.png 2x">
                     <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/promo/flat-white-tablet@1x.png 1x, images/promo/flat-white-tablet@2x.png 2x">
                     <img class="promo-product__image" src="images/promo/flat-white-mobile@1x.png" srcset="images/promo/flat-white-mobile@2x.png" width="280" height="280" alt="Декаф Флэт Уайт">
@@ -87,7 +87,7 @@
                   <picture class="promo-product__image-fake">
                     <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/promo/lavender-latte-desktop@1x.webp 1x, images/promo/lavender-latte-desktop@2x.webp 2x">
                     <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/promo/lavender-latte-tablet@1x.webp 1x, images/promo/lavender-latte-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="images/promo/lavender-latte-mobile@1x.webp 1x, images/promo/lavender-latte-mobile@2x.webp 2x">
+                    <source width="280" height="280" type="image/webp" srcset="images/promo/lavender-latte-mobile@1x.webp 1x, images/promo/lavender-latte-mobile@2x.webp 2x">
                     <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/promo/lavender-latte-desktop@1x.png 1x, images/promo/lavender-latte-desktop@2x.png 2x">
                     <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/promo/lavender-latte-tablet@1x.png 1x, images/promo/lavender-latte-tablet@2x.png 2x">
                     <img class="promo-product__image" src="images/promo/lavender-latte-mobile@1x.png" srcset="images/promo/lavender-latte-mobile@2x.png" width="280" height="280" alt="Лавандовый Латте">
@@ -109,7 +109,7 @@
                   <picture class="promo-product__image-fake">
                     <source width="600" height="600" type="image/webp" media="(min-width: 1440px)" srcset="images/promo/espresso-desktop@1x.webp 1x, images/promo/espresso-desktop@2x.webp 2x">
                     <source width="476" height="476" type="image/webp" media="(min-width: 768px)" srcset="images/promo/espresso-tablet@1x.webp 1x, images/promo/espresso-tablet@2x.webp 2x">
-                    <source type="image/webp" srcset="images/promo/espresso-mobile@1x.webp 1x, images/promo/espresso-mobile@2x.webp 2x">
+                    <source width="280" height="280" type="image/webp" srcset="images/promo/espresso-mobile@1x.webp 1x, images/promo/espresso-mobile@2x.webp 2x">
                     <source width="600" height="600" type="image/png" media="(min-width: 1440px)" srcset="images/promo/espresso-desktop@1x.png 1x, images/promo/espresso-desktop@2x.png 2x">
                     <source width="476" height="476" type="image/png" media="(min-width: 768px)" srcset="images/promo/espresso-tablet@1x.png 1x, images/promo/espresso-tablet@2x.png 2x">
                     <img class="promo-product__image" src="images/promo/espresso-mobile@1x.png" srcset="images/promo/espresso-mobile@2x.png" width="280" height="280" alt="Тройной Эспрессо">
@@ -127,8 +127,8 @@
                 </div>
               </li>
           </ul>
-          <button class="declaration__button declaration__button--previous"><span class="visually-hidden">Предыдущий слайд</span></button>
-          <button class="declaration__button declaration__button--next"><span class="visually-hidden">Следующий слайд</span></button>
+          <button class="declaration__button declaration__button--previous" type="button"><span class="visually-hidden">Предыдущий слайд</span></button>
+          <button class="declaration__button declaration__button--next" type="button"><span class="visually-hidden">Следующий слайд</span></button>
           <div class="declaration__slider">
             <ul class="slider">
               <li class="slider__item">
@@ -210,7 +210,6 @@
                 </label>
               </li>
             </ul>
-            </div>
           </fieldset>
           <fieldset class="filter-group">
             <legend class="filter-group__title">Наличие молока</legend>
@@ -292,7 +291,7 @@
         </form>
         <div class="catalog__sort">
           <p class="catalog__sort-title">Сортировка:</p>
-          <select class="catalog__sort-select select-control" aria-label="Сортировка">
+          <select class="catalog__sort-select select-control" aria-label="Сортировка" name="sort">
             <option class="select-control__option" value="default" selected>по умолчанию</option>
             <option class="select-control__option" value="popular">по популярности</option>
             <option class="select-control__option" value="expensive">по цене</option>
@@ -408,7 +407,7 @@
           <picture class="map__wrapper-fake">
             <source width="1440" height="540" type="image/webp" media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.webp 1x, images/map/map-desktop@2x.webp 2x">
             <source width="768" height="480" type="image/webp" media="(min-width: 768px)" srcset="images/map/map-tablet@1x.webp 1x, images/map/map-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="images/map/map-mobile@1x.webp 1x, images/map/map-mobile@2x.webp 2x">
+            <source width="320" height="420" type="image/webp" srcset="images/map/map-mobile@1x.webp 1x, images/map/map-mobile@2x.webp 2x">
             <source width="1440" height="540" type="image/png" media="(min-width: 1440px)" srcset="images/map/map-desktop@1x.png 1x, images/map/map-desktop@2x.png 2x">
             <source width="768" height="480" type="image/png" media="(min-width: 768px)" srcset="images/map/map-tablet@1x.png 1x, images/map/map-tablet@2x.png 2x">
             <img class="map__image" src="images/map/map-mobile@1x.png" srcset="images/map/map-mobile@2x.png" width="320" height="420" alt="Расположение магазина на карте, Санкт-Петербург, набережная реки Карповки, дом 5">
@@ -493,7 +492,7 @@
       </section>
       <section class="developers">
         <h4 class="developers__title">
-          Разработано в<a class="developers__link" href="https://htmlacademy.ru">HTML Academy</a>
+          Разработано в<a class="developers__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         </h4>
       </section>
     </div>
