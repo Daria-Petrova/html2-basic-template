@@ -7,7 +7,7 @@
   }
 
   @include desktop-size {
-    padding: 100px 0 120px;
+    padding: 101px 0 120px;
   }
 }
 
@@ -30,7 +30,7 @@
 
   @include desktop-size {
     max-width: $desktop;
-    margin: 0 auto 80px;
+    margin: 5px auto 80px;
   }
 }
 
@@ -53,7 +53,7 @@
     max-width: 1380px;
     margin: 0 auto;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 10px;
   }
 }
 

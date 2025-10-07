@@ -21,7 +21,7 @@
     grid-template-areas:
       "links      footer-navigation media      contacts"
       "developers developers        developers developers";
-    gap: 30px;
+    gap: 8px 10px;
   }
 }
 
@@ -37,13 +37,18 @@
 
   @include desktop-size {
     background-color: $color-base-main;
-    padding: 46px 0 0;
+    padding: 51px 0 0;
+    margin-left: 6px;
   }
 }
 
 .footer-navigation__title {
   margin: 0 0 19px;
   @include font(14px, 1.4, 700, $color-base-primary);
+
+  @include desktop-size {
+    margin: 0 0 15px;
+  }
 }
 
 .footer-navigation__list {
@@ -53,6 +58,10 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+
+  @include desktop-size {
+    gap: 17px;
+  }
 }
 
 .footer-navigation__link {

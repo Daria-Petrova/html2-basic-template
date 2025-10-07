@@ -54,6 +54,10 @@ input[type='number'] {
   @include tablet-size {
     max-width: 87px;
   }
+
+  @include desktop-size {
+    max-width: 134px;
+  }
 }
 
 .period-value__item-divider {

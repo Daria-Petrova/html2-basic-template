@@ -25,6 +25,12 @@
     border-top: none;
     position: initial;
   }
+
+  @include desktop-size {
+    gap: 10px 22px;
+    justify-content: left;
+    margin-left: 109px;
+  }
 }
 
 .navigation-list__item {

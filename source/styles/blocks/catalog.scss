@@ -37,7 +37,7 @@
 
   @include desktop-size{
     grid-area: title;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
 }
 
@@ -64,6 +64,7 @@
     align-content: start;
     justify-self: left;
     margin-left: 40px;
+    gap: 30px;
   }
 }
 
@@ -79,11 +80,21 @@
     flex-direction: row;
     justify-content: center;
   }
+
+  @include desktop-size {
+    justify-content: left;
+    margin-top: 11px;
+    gap: 20px;
+  }
 }
 
 .catalog__filter-button {
   outline-color: transparent;
   border: none;
+
+  @include desktop-size {
+    width: 149px;
+  }
 }
 
 .catalog__sort {
@@ -136,7 +147,7 @@
     grid-area: list;
     grid-template-columns: 1fr 1fr 1fr;
     justify-self: start;
-    margin-bottom: 60px;
+    margin-bottom: 62px;
   }
 }
 
